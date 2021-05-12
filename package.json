@@ -1,0 +1,8 @@
+{
+  "name": "lighthouse",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:mat-furla/lighthouse.git",
+  "author": "Matheus Furlanetto <matheus.furlanetto@la.logicalis.com>",
+  "license": "MIT"
+}
