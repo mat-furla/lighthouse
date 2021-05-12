@@ -4,5 +4,21 @@
   "main": "index.js",
   "repository": "git@github.com:mat-furla/lighthouse.git",
   "author": "Matheus Furlanetto <matheus.furlanetto@la.logicalis.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "lighthouse": "^7.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.26.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "nodemon": "^2.0.7",
+    "prettier": "2.3.0"
+  }
 }
