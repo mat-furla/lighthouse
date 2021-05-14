@@ -9,7 +9,6 @@ export default {
     try {
       const chrome = await launch({ chromeFlags: ['--headless'] })
       const options = {
-        logLevel: 'info',
         output: 'json',
         port: chrome.port
       }

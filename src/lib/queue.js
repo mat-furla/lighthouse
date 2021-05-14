@@ -17,13 +17,13 @@ export default {
 
     return queue.bull.add(data, queue.options)
   },
+  status(name, id) {
+    const queue = this.queues.find((queue) => queue.name === name)
+    return queue.bull.getJob(id)
+  },
   process() {
     return this.queues.forEach((queue) => {
       queue.bull.process(queue.handle)
-
-      queue.bull.on('completed', (job, result) => {
-        console.log(`Job with id ${job.id} has been completed.`)
-      })
 
       queue.bull.on('failed', (job, err) => {
         console.log('Job failed', queue.key, job.data)
