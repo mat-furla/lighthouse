@@ -1,6 +1,7 @@
 import lighthouse from 'lighthouse'
 import { launch } from 'chrome-launcher'
 
+// Job para auditoria de site com o Lighthouse
 export default {
   key: 'audit',
   async handle({ data }) {

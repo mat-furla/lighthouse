@@ -5,16 +5,16 @@ import helmet from 'helmet'
 import routes from './routes'
 import { PORT } from './environment'
 
-// Create express instance
+// Cria instância do Express
 const app = express()
 app.use(json())
 app.use(cors())
 app.use(helmet())
 
-// Routes
+// Rotas
 app.use('/', routes)
 
-// Listen port
+// Execução
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)
 })

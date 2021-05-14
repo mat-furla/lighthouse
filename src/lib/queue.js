@@ -3,6 +3,7 @@ import * as jobs from '../jobs'
 
 import { REDIS_URL } from '../environment'
 
+// Cria, executa e retorna status de jobs do bull
 const queues = Object.values(jobs).map((job) => ({
   bull: new Queue(job.key, REDIS_URL),
   name: job.key,
@@ -14,7 +15,6 @@ export default {
   queues,
   add(name, data) {
     const queue = this.queues.find((queue) => queue.name === name)
-
     return queue.bull.add(data, queue.options)
   },
   status(name, id) {
