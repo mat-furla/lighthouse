@@ -16,9 +16,9 @@ export default {
       const runnerResult = await lighthouse(url_site, options)
       await chrome.kill()
 
-      console.log(runnerResult.lhr.categories)
+      return runnerResult.lhr.categories
     } catch (err) {
-      console.log(err)
+      return err
     }
   }
 }

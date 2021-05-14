@@ -21,6 +21,10 @@ export default {
     return this.queues.forEach((queue) => {
       queue.bull.process(queue.handle)
 
+      queue.bull.on('completed', (job, result) => {
+        console.log(`Job with id ${job.id} has been completed.`)
+      })
+
       queue.bull.on('failed', (job, err) => {
         console.log('Job failed', queue.key, job.data)
         console.log(err)
