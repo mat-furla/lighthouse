@@ -4,13 +4,13 @@ Contém aplicação NodeJS com Express e [bull](https://github.com/OptimalBits/b
 
 ## Ambiente de desenvolvimento
 
-Necessário ter um Redis em execução antes de iniciar, por padrão a rest api se conecta por com a url `redis://127.0.0.1:6379`. É possível criar um banco através do docker:
+Necessário ter um Redis em execução antes de iniciar, por padrão a rest api se conecta com `redis://127.0.0.1:6379`. É possível criar um banco através do docker:
 
 ```bash
 >> docker run --name redis -p 6379:6379 -d redis:alpine
 ```
 
-Intalação de dependências:
+Instalação de dependências:
 
 ```bash
 >> yarn install
@@ -24,7 +24,7 @@ Execução:
 
 ## Ambiente de produção
 
-A aplicação é pensada para deploy no Heroku, dessa forma foi incluido um arquivo `Procfile`, detalhes adicionais ainda devem ser incluidos já que nenhum teste real foi feito.
+A aplicação é pensada para deploy no Heroku, dessa forma foi incluído um arquivo `Procfile`, detalhes adicionais ainda devem ser colocados já que nenhum teste real foi feito.
 
 ```bash
 >> yarn run start
@@ -46,5 +46,6 @@ A aplicação é pensada para deploy no Heroku, dessa forma foi incluido um arqu
 
 ## Referências
 
+- [masterclass-nodejs-background-jobs](https://github.com/rocketseat-content/masterclass-nodejs-background-jobs)
 - [Worker Dynos](https://devcenter.heroku.com/articles/background-jobs-queueing)
 - [Heroku-Redis](https://elements.heroku.com/addons/heroku-redis)
