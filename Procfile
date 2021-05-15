@@ -1,2 +1,2 @@
-web: sucrase-node src/server.js
-worker: sucrase-node src/worker.js
+web: yarn run start:server
+worker: yarn run start:worker
