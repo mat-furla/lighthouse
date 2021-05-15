@@ -5,12 +5,10 @@
   "author": "Matheus Furlanetto <matheus.furlanetto@la.logicalis.com>",
   "license": "MIT",
   "scripts": {
-    "start": "npm-run-all -p start:*",
-    "start:server": "sucrase-node src/server.js",
-    "start:worker": "sucrase-node src/worker.js",
+    "postinstall": "sucrase ./src -d ./build  --transforms imports",
     "dev": "npm-run-all -p dev:*",
-    "dev:server": "nodemon src/server.js",
-    "dev:worker": "nodemon src/worker.js"
+    "dev:server": "nodemon src/server",
+    "dev:worker": "nodemon src/worker"
   },
   "dependencies": {
     "bull": "^3.22.5",
