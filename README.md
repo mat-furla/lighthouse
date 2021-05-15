@@ -24,11 +24,20 @@ Execução:
 
 ## Ambiente de produção
 
-A aplicação é pensada para deploy no Heroku, dessa forma foi incluído um arquivo `Procfile`, detalhes adicionais ainda devem ser colocados já que nenhum teste real foi feito.
+A aplicação é pensada para deploy no Heroku, dessa forma instale a ferramenta `heroku-cli` seguindo instruções do [link](https://devcenter.heroku.com/articles/heroku-cli#download-and-install) e prossiga:
 
 ```bash
->> yarn run start
+>> heroku create
+>> git push heroku main
 ```
+
+Adicione o add-on Heroku Redis:
+
+```bash
+>> heroku addons:create heroku-redis:hobby-dev
+```
+
+Mais informações no [link](https://devcenter.heroku.com/articles/git).
 
 ## Rotas
 
